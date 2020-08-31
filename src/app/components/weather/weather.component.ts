@@ -5,6 +5,7 @@ import { debounceTime } from 'rxjs/operators';
 import { distinctUntilChanged } from 'rxjs/operators';
 
 import { WeatherService } from '../../services/weather.service';
+import { Weather } from '../../models';
 
 @Component({
   selector: 'app-weather',
@@ -22,7 +23,7 @@ export class WeatherComponent implements OnInit {
 
   constructor(private weatherService: WeatherService) {
     this.cityToSearch.setValue(this.name);
-
+    //  https://stackoverflow.com/questions/48212949/no-provider-for-controlcontainer-angular-5
     // Tip from https://stackoverflow.com/questions/51917433/angular6-property-debouncetime-does-not-exist-on-type-observableany/51917462
     this.cityToSearch.valueChanges
       .pipe(debounceTime(500), distinctUntilChanged())
@@ -31,23 +32,25 @@ export class WeatherComponent implements OnInit {
       });
   }
 
-  ngOnInit(): void {
-    this.getWeatherData(this.cityToSearch.value);
-  }
-
-  public getWeatherData(city) {
-    const currentCity = city || this.name;
-    this.name = currentCity;
-    this.weatherService.getWeatherData(currentCity).subscribe((data) => {
-      this.setMapParameters(data);
-    });
-  }
-
-  private setMapParameters(data) {
+  private setMapParameters(data: Weather) {
     const { temp, humidity, name } = data;
     this.name = name;
     this.humidity = humidity;
     // T(°C) = (T(°F) - 32) × 5/9
     this.temperature = (((temp - 32) * 5) / 9).toFixed(2);
+  }
+
+  ngOnInit(): void {
+    this.getWeatherData(this.cityToSearch.value);
+  }
+
+  public getWeatherData(city: string) {
+    const currentCity = city || this.name;
+    this.name = currentCity;
+    this.weatherService
+      .getWeatherData(currentCity)
+      .subscribe((data: Weather) => {
+        this.setMapParameters(data);
+      });
   }
 }

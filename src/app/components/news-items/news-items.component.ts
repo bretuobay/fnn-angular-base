@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NewsService } from '../../services/news.service';
+import { NewsItem } from '../../models';
 
 @Component({
   selector: 'news-items',
@@ -9,13 +10,15 @@ import { NewsService } from '../../services/news.service';
 })
 export class NewsItemsComponent implements OnInit {
   @Input() category: string = 'home';
-  public articles: any;
+  public articles: NewsItem[] = [];
 
   constructor(private newsService: NewsService) {}
 
   ngOnInit(): void {
-    this.newsService.getNewsByCategory(this.category).subscribe((data) => {
-      this.articles = data;
-    });
+    this.newsService
+      .getNewsByCategory(this.category)
+      .subscribe((data: NewsItem[]) => {
+        this.articles = data;
+      });
   }
 }
