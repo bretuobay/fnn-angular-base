@@ -1,10 +1,78 @@
-<!-- The navigation menu -->
-<div class="navbar">
-  <a routerLink="/home">Home</a>
-  <a routerLink="/culture">Culture</a>
-  <a routerLink="/entertainment">Entertainment</a>
-  <a routerLink="/technology">Technology</a>
-  <a routerLink="/science">Science</a>
-  <a routerLink="/business">Business</a>
-  <a routerLink="/videos">Videos</a>
-</div>
+<nav class="navbar navbar-toggleable-md">
+  <div class="container">
+    <div
+      class="navbar-header d-flex align-items-center justify-content-between"
+    >
+      <a routerLink="/" class="navbar-brand animsition-link">Angular FNN </a>
+      <button
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarcollapse"
+        aria-controls="navbarcollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+      ></button>
+    </div>
+    <div id="navbarcollapse" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a
+            routerLink="/home"
+            class="nav-link animsition-link"
+            routerLinkActive="active"
+            >HOME</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/culture"
+            class="nav-link animsition-link"
+            routerLinkActive="active"
+            >CULTURE & POLITICS</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/entertainment"
+            class="nav-link animsition-link"
+            routerLinkActive="active"
+            >ENTERTAINMENT</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/technology"
+            class="nav-link animsition-link"
+            routerLinkActive="active"
+            >TECH
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/science"
+            class="nav-link animsition-link"
+            routerLinkActive="active"
+            >SCIENCE</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/business"
+            class="nav-link animsition-link"
+            routerLinkActive="active"
+            >BUSINESS</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/videos"
+            class="nav-link animsition-link"
+            routerLinkActive="active"
+            >VIDEOS & MOVIES
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
