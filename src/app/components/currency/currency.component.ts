@@ -9,7 +9,7 @@ import { CurrencyService } from '../../services/currency.service';
 })
 export class CurrencyComponent implements OnInit {
   @Input() currency: string = 'Rupees';
-  public currencyList: any = [];
+  public currencyList: any;
 
   constructor(private currencyService: CurrencyService) {}
 

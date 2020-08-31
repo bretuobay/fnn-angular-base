@@ -11,7 +11,7 @@ export const GET_WEATHER_DATA_SUCCESS = '[Weather] Get Weather Success';
 export const GET_WEATHER_DATA_FAILURE = '[Weather] Get Weather Failure';
 
 // End points
-export const CURRENCY_API_URL_ENDPOINT = 'http://localhost:3000/api/weather/';
+export const CURRENCY_API_URL_ENDPOINT = 'http://localhost:3000/api/currency/';
 
 export const NEWS_API_URL_ENDPOINT = 'http://localhost:3000/api/news/';
 
