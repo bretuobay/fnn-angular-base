@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of currencyList">
+    <ul class="list-group">
+      <li class="list-group-item inner">Currency :{{ item.currency }}</li>
+      <li class="list-group-item inner">Price : {{ item.value }}</li>
+    </ul>
+  </li>
+</ul>
