@@ -21,4 +21,9 @@ export class NewsItemsComponent implements OnInit {
         this.articles = data;
       });
   }
+
+  formatDate(publishedAt: string) {
+    const date = new Date(publishedAt);
+    return `${date.getMonth() + 1}/${date.getDate()} /${date.getFullYear()}`;
+  }
 }

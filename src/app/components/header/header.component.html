@@ -1,78 +1,79 @@
-<nav class="navbar navbar-toggleable-md">
-  <div class="container">
-    <div
-      class="navbar-header d-flex align-items-center justify-content-between"
-    >
-      <a routerLink="/" class="navbar-brand animsition-link">Angular FNN </a>
-      <button
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarcollapse"
-        aria-controls="navbarcollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        class="navbar-toggler"
-      ></button>
-    </div>
-    <div id="navbarcollapse" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a
-            routerLink="/home"
-            class="nav-link animsition-link"
-            routerLinkActive="active"
-            >HOME</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            routerLink="/culture"
-            class="nav-link animsition-link"
-            routerLinkActive="active"
-            >CULTURE & POLITICS</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            routerLink="/entertainment"
-            class="nav-link animsition-link"
-            routerLinkActive="active"
-            >ENTERTAINMENT</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            routerLink="/technology"
-            class="nav-link animsition-link"
-            routerLinkActive="active"
-            >TECH
-          </a>
-        </li>
-        <li class="nav-item">
-          <a
-            routerLink="/science"
-            class="nav-link animsition-link"
-            routerLinkActive="active"
-            >SCIENCE</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            routerLink="/business"
-            class="nav-link animsition-link"
-            routerLinkActive="active"
-            >BUSINESS</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            routerLink="/videos"
-            class="nav-link animsition-link"
-            routerLinkActive="active"
-            >VIDEOS & MOVIES
-          </a>
-        </li>
-      </ul>
-    </div>
+<header class="header">
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" routerLink="/home">{{ siteName }}</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExample07"
+          aria-controls="navbarsExample07"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav">
+          <!-- Search-->
+          <li class="nav-item">
+            <a
+              routerLink="/home"
+              class="nav-link animsition-link"
+              routerLinkActive="active"
+              >HOME</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              routerLink="/culture"
+              class="nav-link animsition-link"
+              routerLinkActive="active"
+              >CULTURE & POLITICS</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              routerLink="/entertainment"
+              class="nav-link animsition-link"
+              routerLinkActive="active"
+              >ENTERTAINMENT</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              routerLink="/technology"
+              class="nav-link animsition-link"
+              routerLinkActive="active"
+              >TECH
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              routerLink="/science"
+              class="nav-link animsition-link"
+              routerLinkActive="active"
+              >SCIENCE</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              routerLink="/business"
+              class="nav-link animsition-link"
+              routerLinkActive="active"
+              >BUSINESS</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              routerLink="/videos"
+              class="nav-link animsition-link"
+              routerLinkActive="active"
+              >VIDEOS & MOVIES
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
-</nav>
+</header>
