@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-export const NEWS_API_URL_ENDPOINT = 'http://localhost:3000/api/news/';
+import { NEWS_API_URL_ENDPOINT } from '../constants';
 
 @Injectable({
   providedIn: 'root',

@@ -23,8 +23,7 @@ export class WeatherComponent implements OnInit {
 
   constructor(private weatherService: WeatherService) {
     this.cityToSearch.setValue(this.name);
-    //  https://stackoverflow.com/questions/48212949/no-provider-for-controlcontainer-angular-5
-    // Tip from https://stackoverflow.com/questions/51917433/angular6-property-debouncetime-does-not-exist-on-type-observableany/51917462
+
     this.cityToSearch.valueChanges
       .pipe(debounceTime(500), distinctUntilChanged())
       .subscribe((city) => {

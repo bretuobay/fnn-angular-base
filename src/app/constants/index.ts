@@ -15,4 +15,6 @@ export const CURRENCY_API_URL_ENDPOINT = 'http://localhost:3000/api/currency/';
 
 export const NEWS_API_URL_ENDPOINT = 'http://localhost:3000/api/news/';
 
+
 export const WEATHER_API_URL_ENDPOINT = 'http://localhost:3000/api/weather/';
+
